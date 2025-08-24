@@ -17,13 +17,16 @@ prompt = "50 year old White female. Normal chest radiograph."
 image = pipe(prompt).images[0]
 ```
 
-## 🩻 Synthetic Dataset
+## 🩻 Synthetic CXR Dataset
 To be released soon, stay tuned.
 
 ![Visuals](assets/visual_examples.png)
 
 ## 🚀 Developer Mode
 ### Environment Setup
+Strongly recommended to create a dedicated virtual environment for this project. 
+A `requirements.txt` is provided. 
+After you install the requirements via your package manager, it is important to run `pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 xformers --index-url https://download.pytorch.org/whl/cu126`. This downgrades torch in order to ensure version compatibility with `monai` and `torchxrayvision` packages. Tested and confirmed to work with wheels for `cu126`, `cu121` and `cu118`.
 
 ### Large-scale Inference
 To run large-scale multi-gpu distributed inference, use the following commands.
