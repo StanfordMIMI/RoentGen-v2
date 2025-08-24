@@ -26,7 +26,7 @@ To be released soon, stay tuned.
 ### Environment Setup
 Strongly recommended to create a dedicated virtual environment for this project. 
 A `requirements.txt` is provided. 
-After you install the requirements via your package manager, it is important to run `pip install torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 xformers --index-url https://download.pytorch.org/whl/cu126`. This downgrades torch in order to ensure version compatibility with `monai` and `torchxrayvision` packages. Tested and confirmed to work with wheels for `cu126`, `cu121` and `cu118`.
+After you install the requirements via your package manager, it is important to run `pip install --upgrade torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 xformers --index-url https://download.pytorch.org/whl/cu126`. This downgrades torch in order to ensure version compatibility with `monai` and `torchxrayvision` packages. Tested and confirmed to work with wheels for `cu126`, `cu121` and `cu118`.
 
 ### Large-scale Inference
 To run large-scale multi-gpu distributed inference, use the following commands.
