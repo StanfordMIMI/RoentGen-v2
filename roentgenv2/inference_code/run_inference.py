@@ -340,10 +340,10 @@ def main(args):
                 break  # for debugging, break after first batch
         accelerator.wait_for_everyone()
 
-    if accelerator.is_main_process:
-        # Zip the generated images
-        shutil.make_archive(args.output_dir[:-1], "zip", args.output_dir)
-        print("Inference complete. Images zipped.")
+    # if accelerator.is_main_process:
+    #     # Zip the generated images
+    #     shutil.make_archive(args.output_dir[:-1], "zip", args.output_dir)
+    #     print("Inference complete. Images zipped.")
 
 
 if __name__ == "__main__":
