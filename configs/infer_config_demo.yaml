@@ -15,13 +15,13 @@
 "enforce_tokenizer_max_sentence_length": 77
 "model_name_or_path": "stanfordmimi/RoentGen-v2"
 
-"output_dir": "RoentGen-v2/outputs"
+"output_dir": "/content/RoentGen-v2/outputs"
 
 # Whether to resume inference from the latest batch index
 # False will start from the beginning and remove any existing files in the output directory
 "resume_from_latest": True
 
-"csv_file_prompts": "RoentGen-v2/demo_data/demo_inference_prompts.csv"
-"csv_demographics_check": "RoentGen-v2/demo_data/demo_inference_prompts.csv"
-"sex_model_path": "RoentGen-v2/demo_data/sex_model_chexpert_resnet_all.ckpt"
+"csv_file_prompts": "/content/RoentGen-v2/demo_data/demo_inference_prompts.csv"
+"csv_demographics_check": "/content/RoentGen-v2/demo_data/demo_inference_prompts.csv"
+"sex_model_path": "/content/RoentGen-v2/demo_data/sex_model_chexpert_resnet_all.ckpt"
 

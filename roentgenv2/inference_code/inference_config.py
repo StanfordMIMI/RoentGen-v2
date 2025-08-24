@@ -5,7 +5,6 @@ import argparse
 @dataclass
 class InferenceConfig:
     use_auth_token: str
-    cache_dir: str
     num_images_per_prompt: int
     test_batch_size: int
     embedding_method: str
@@ -16,6 +15,7 @@ class InferenceConfig:
     enforce_tokenizer_max_sentence_length: int
     model_name_or_path: str
     output_dir: str
+    cache_dir: str = None
     prompt_dir: str = None
     data_filter_file: str = None
     seed: int = 10

@@ -5,13 +5,13 @@
 seed: 873
 
 # Whether to load dataset from wds instead of image/prompt directories
-use_wds_dataset: False
-url_root: "RoentGen-v2/demo_data/demo_webdataset"
+use_wds_dataset: True
+url_root: "/content/RoentGen-v2/demo_data/demo_webdataset"
 data_filter_file: null
 
 # If use_wds_dataset is False, then use image_dir and prompt_dir
-image_dir: "RoentGen-v2/demo_data/demo_datafiles/image_dir"
-prompt_dir: "RoentGen-v2/demo_data/demo_datafiles/prompt_dir"
+# image_dir: "/content/RoentGen-v2/demo_data/demo_datafiles/image_dir"
+# prompt_dir: "/content/RoentGen-v2/demo_data/demo_datafiles/prompt_dir"
 
 pretrained_model_name_or_path: "stabilityai/stable-diffusion-2-1-base"
 pretrained_text_encoder_name_or_path: null
@@ -29,7 +29,7 @@ learning_rate: 1.0e-5
 # train batch size per GPU
 train_batch_size: 4 #48
 max_train_steps: 2 #60000
-output_dir: "RoentGen-v2/outputs"
+output_dir: "/content/RoentGen-v2/outputs"
 
 checkpointing_steps: 1 #500
 resume_from_checkpoint: "latest"
