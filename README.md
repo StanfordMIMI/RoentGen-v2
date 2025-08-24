@@ -13,7 +13,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 pipe = DiffusionPipeline.from_pretrained("stanfordmimi/RoentGen-v2")
 pipe = pipe.to(device)
 
-prompt = "50 year old White female. Normal chest radiograph."
+prompt = "50 year old female. Normal chest radiograph."
 image = pipe(prompt).images[0]
 ```
 
