@@ -20,7 +20,7 @@ image = pipe(prompt).images[0]
 ## 🩻 Synthetic Dataset
 To be released soon, stay tuned.
 
-![Visuals](assets/visual_examples.pdf)
+![Visuals](assets/visual_examples.png)
 
 ## 🚀 Developer Mode
 ### Environment Setup
