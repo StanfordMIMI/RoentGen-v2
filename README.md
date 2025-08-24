@@ -23,22 +23,44 @@ To run large-scale multi-gpu distributed inference, use the following commands.
 
 Only inference, no quality check:
 ```bash
+accelerate launch --num_processes=1 --mixed_precision bf16 \
+ roentgenv2/inference_code/run_inference.py \
+ --config_file="./configs/infer_config_demo.yaml"
+```
+
+Multi-gpu option:
+```bash
 accelerate launch --num_processes=4 --multi-gpu --mixed_precision bf16 \
  roentgenv2/inference_code/run_inference.py \
- --config_file="roentgenv2/scripts/infer_config.yaml"
+ --config_file="./configs/infer_config_demo.yaml"
 ```
 
 Inference plus demographics quality check:
 ```bash
+accelerate launch --num_processes=1 --mixed_precision bf16 \
+ roentgenv2/inference_code/run_inference_w_quality_check.py \
+ --config_file="./configs/infer_config_demo.yaml"
+```
+
+Multi-gpu option:
+```bash
 accelerate launch --num_processes=4 --multi-gpu --mixed_precision bf16 \
  roentgenv2/inference_code/run_inference_w_quality_check.py \
- --config_file="roentgenv2/scripts/infer_config.yaml"
+ --config_file="./configs/infer_config_demo.yaml"
 ```
 
 ## 🔧 Finetuning Instructions
 
 In order to finetune RoentGen-v2 on **your own dataset**, follow the instructions below (requires Python 3.9 and cloning the repository).
-
 ```bash
-accelerate launch --num_processes 4 --multi_gpu --mixed_precision bf16 roentgenv2/train_code/train.py  --config_file="roentgenv2/scripts/train_config.yaml"
+accelerate launch --num_processes=1 --mixed_precision bf16 \
+ roentgenv2/train_code/train.py \
+ --config_file="./configs/train_config_demo.yaml"
+```
+
+Multi-gpu option:
+```bash
+accelerate launch --num_processes 4 --multi_gpu --mixed_precision bf16 \
+ roentgenv2/train_code/train.py \
+ --config_file="./configs/train_config_demo.yaml"
 ```
