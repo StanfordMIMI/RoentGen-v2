@@ -20,10 +20,12 @@ image = pipe(prompt).images[0]
 ## 🩻 Synthetic Dataset
 To be released soon, stay tuned.
 
-## 💻 Developer Mode
+![Visuals](documentation/assets/visual_examples.pdf)
+
+## 🚀 Developer Mode
 ### Environment Setup
 
-### 🚀 Large-scale Inference
+### Large-scale Inference
 To run large-scale multi-gpu distributed inference, use the following commands.
 
 Only inference, no quality check:
@@ -54,7 +56,7 @@ accelerate launch --num_processes=4 --multi-gpu --mixed_precision bf16 \
  --config_file="./configs/infer_config_demo.yaml"
 ```
 
-### 🔧 Finetuning Instructions
+### Finetuning Instructions
 
 In order to finetune RoentGen-v2 on your own dataset, follow the instructions below.
 ```bash
