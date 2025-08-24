@@ -2,11 +2,10 @@
 
 [![Hugging Face](https://huggingface.co/datasets/huggingface/badges/resolve/main/model-on-hf-md.svg)](https://huggingface.co/stanfordmimi/RoentGen-v2)  [![License](https://img.shields.io/github/license/stanfordmimi/RoentGen-v2?style=for-the-badge)](LICENSE)
 
-⏳ Code and instruction upload in progress...
-
-## 🚀 Inference Instructions
+## 🧨Inference with diffusers
 
 ```python
+import torch
 from diffusers import DiffusionPipeline
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -18,7 +17,13 @@ prompt = "50 year old White female. Normal chest radiograph."
 image = pipe(prompt).images[0]
 ```
 
-### Large-scale Inference
+## 🩻 Synthetic Dataset
+To be released soon, stay tuned.
+
+## 💻 Developer Mode
+### Environment Setup
+
+### 🚀 Large-scale Inference
 To run large-scale multi-gpu distributed inference, use the following commands.
 
 Only inference, no quality check:
@@ -28,7 +33,7 @@ accelerate launch --num_processes=1 --mixed_precision bf16 \
  --config_file="./configs/infer_config_demo.yaml"
 ```
 
-Multi-gpu option:
+Only inference, no quality check (multi-gpu):
 ```bash
 accelerate launch --num_processes=4 --multi-gpu --mixed_precision bf16 \
  roentgenv2/inference_code/run_inference.py \
@@ -42,23 +47,23 @@ accelerate launch --num_processes=1 --mixed_precision bf16 \
  --config_file="./configs/infer_config_demo.yaml"
 ```
 
-Multi-gpu option:
+Inference plus demographics quality check (multi-gpu):
 ```bash
 accelerate launch --num_processes=4 --multi-gpu --mixed_precision bf16 \
  roentgenv2/inference_code/run_inference_w_quality_check.py \
  --config_file="./configs/infer_config_demo.yaml"
 ```
 
-## 🔧 Finetuning Instructions
+### 🔧 Finetuning Instructions
 
-In order to finetune RoentGen-v2 on **your own dataset**, follow the instructions below (requires Python 3.9 and cloning the repository).
+In order to finetune RoentGen-v2 on your own dataset, follow the instructions below.
 ```bash
 accelerate launch --num_processes=1 --mixed_precision bf16 \
  roentgenv2/train_code/train.py \
  --config_file="./configs/train_config_demo.yaml"
 ```
 
-Multi-gpu option:
+Finetuning (multi-gpu):
 ```bash
 accelerate launch --num_processes 4 --multi_gpu --mixed_precision bf16 \
  roentgenv2/train_code/train.py \
