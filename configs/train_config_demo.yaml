@@ -1,0 +1,35 @@
+# Option to specify a cache directory where downloaded models will be stored
+# cache_dir: ".cache"
+
+# Seed for reproducibility
+seed: 873
+
+# Whether to load dataset from wds instead of image/prompt directories
+use_wds_dataset: False
+url_root: "RoentGen-v2/demo_data/demo_webdataset"
+data_filter_file: null
+
+# If use_wds_dataset is False, then use image_dir and prompt_dir
+image_dir: "RoentGen-v2/demo_data/demo_datafiles/image_dir"
+prompt_dir: "RoentGen-v2/demo_data/demo_datafiles/prompt_dir"
+
+pretrained_model_name_or_path: "stabilityai/stable-diffusion-2-1-base"
+pretrained_text_encoder_name_or_path: null
+train_text_encoder: True
+
+resolution: 512
+embedding_method: "last_hidden_state"
+enforce_tokenizer_max_sentence_length: 77
+gradient_accumulation_steps: 1
+lr_scheduler: "cosine"
+mixed_precision: bf16
+lr_warmup_steps: 500
+learning_rate: 1.0e-5
+
+# train batch size per GPU
+train_batch_size: 4 #48
+max_train_steps: 2 #60000
+output_dir: "RoentGen-v2/outputs"
+
+checkpointing_steps: 1 #500
+resume_from_checkpoint: "latest"

@@ -1,0 +1,27 @@
+"use_auth_token": "YOUR_HUGGINGFACE_TOKEN"
+
+# Option to specify a cache directory where downloaded models will be stored
+# cache_dir: ".cache"
+
+# For inference with quality check, num_images_per_prompt must be 1
+"num_images_per_prompt": 1
+"test_batch_size": 4
+"embedding_method": "last_hidden_state"
+"guidance_scale": 3
+"num_inference_steps": 75
+"mixed_precision": "bf16"
+
+"pretrained_text_encoder_name_or_path": "stabilityai/stable-diffusion-2-1-base"
+"enforce_tokenizer_max_sentence_length": 77
+"model_name_or_path": "stanfordmimi/RoentGen-v2"
+
+"output_dir": "RoentGen-v2/outputs"
+
+# Whether to resume inference from the latest batch index
+# False will start from the beginning and remove any existing files in the output directory
+"resume_from_latest": True
+
+"csv_file_prompts": "RoentGen-v2/demo_data/demo_inference_prompts.csv"
+"csv_demographics_check": "RoentGen-v2/demo_data/demo_inference_prompts.csv"
+"sex_model_path": "RoentGen-v2/demo_data/sex_model_chexpert_resnet_all.ckpt"
+

@@ -1,0 +1,11 @@
+dicom_id,gender,anchor_age,race,impression_short,prompt_variation
+demo0000,F,28,WHITE,No evidence of acute cardiopulmonary disease .,28 year old WHITE female. No evidence of acute cardiopulmonary disease .
+demo0001,F,34,ASIAN,No acute cardiopulmonary process .,34 year old ASIAN female. No acute cardiopulmonary process .
+demo0002,F,86,BLACK,No evidence of acute cardiopulmonary process .,86 year old BLACK female. No evidence of acute cardiopulmonary process .
+demo0003,M,74,BLACK,No acute intrathoracic abnormalities identified .,74 year old BLACK male. No acute intrathoracic abnormalities identified .
+demo0004,M,71,HISPANIC,Normal chest .,71 year old HISPANIC male. Normal chest .
+demo0005,F,54,BLACK,No evidence of acute cardiopulmonary abnormalities .,54 year old BLACK female. No evidence of acute cardiopulmonary abnormalities .
+demo0006,F,35,WHITE,No acute cardiopulmonary abnormality .,35 year old WHITE female. No acute cardiopulmonary abnormality .
+demo0007,M,39,HISPANIC,No acute cardiopulmonary process .,39 year old HISPANIC male. No acute cardiopulmonary process .
+demo0008,F,25,BLACK,No acute cardiopulmonary process .,25 year old BLACK female. No acute cardiopulmonary process .
+demo0009,M,79,BLACK,No acute cardiopulmonary process .,79 year old BLACK male. No acute cardiopulmonary process .
